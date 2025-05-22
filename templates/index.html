@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Python Data Types</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        table { border-collapse: collapse; width: 60%; }
+        th, td { border: 1px solid #ddd; padding: 12px; }
+        th { background-color: #4CAF50; color: white; }
+        tr:nth-child(even){background-color: #f2f2f2;}
+    </style>
+</head>
+<body>
+    <h2>Python Data Types Demonstration</h2>
+    <table>
+        <tr>
+            <th>Data Type</th>
+            <th>Value</th>
+            <th>Type</th>
+        </tr>
+        {% for key, value in data.items() %}
+        <tr>
+            <td>{{ key }}</td>
+            <td>{{ value[0] }}</td>
+            <td>{{ value[1] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
