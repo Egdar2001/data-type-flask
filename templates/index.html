@@ -4,14 +4,15 @@
     <title>Python Data Types</title>
     <style>
         body { font-family: Arial, sans-serif; padding: 20px; }
-        table { border-collapse: collapse; width: 60%; }
+        table { border-collapse: collapse; width: 70%; }
         th, td { border: 1px solid #ddd; padding: 12px; }
         th { background-color: #4CAF50; color: white; }
         tr:nth-child(even){background-color: #f2f2f2;}
+        .form-section { margin-top: 40px; }
     </style>
 </head>
 <body>
-    <h2>Python Data Types Demonstration</h2>
+    <h2>Predefined Python Data Types</h2>
     <table>
         <tr>
             <th>Data Type</th>
@@ -26,5 +27,19 @@
         </tr>
         {% endfor %}
     </table>
+
+    <div class="form-section">
+        <h2>Try Your Own Value</h2>
+        <form method="post">
+            <input type="text" name="value" placeholder="Enter a Python value like 123, 5.5, [1,2], {'a':1}" style="width: 400px;" required>
+            <button type="submit">Check Type</button>
+        </form>
+
+        {% if user_input is not none %}
+            <h3>Result</h3>
+            <p><strong>Value:</strong> {{ user_input }}</p>
+            <p><strong>Detected Type:</strong> {{ input_type }}</p>
+        {% endif %}
+    </div>
 </body>
 </html>
